@@ -113,7 +113,7 @@ def changeDNS(line, s_info, c_info, domain, sub_domain, cloud):
                         continue
                 ret = cloud.change_record(domain, info["recordId"], sub_domain, cf_ip, RECORD_TYPE, line, TTL)
                 if(DNS_SERVER != 1 or ret["code"] == 0):
-                    print("CHANGE DNS SUCCESS: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + "----RECORDLINE: "+line+"----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) )
+                    print("DNS 更新成功: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + ----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) )
                 else:
                     print("CHANGE DNS ERROR: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + "----RECORDLINE: "+line+"----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) + "----MESSAGE: " + ret["message"] )
         elif create_num > 0:
