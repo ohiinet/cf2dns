@@ -1,13 +1,16 @@
 name: Delete old workflow runs
 on:
-  schedule:
-    - cron: '/7 * * * *'
   workflow_dispatch:
-    inputs:
-      root_sol:
+  push:
+    branches: 
+      - master
         description: "Workflow Title"
         required: true
         default: "Delete old workflow runs"
+        
+  schedule:
+    - cron: '/7 * * * *'
+
 
 jobs:
   del_runs:
