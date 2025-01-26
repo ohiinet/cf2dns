@@ -45,7 +45,7 @@ API_3 = 'https://www.wetest.vip/api/cf2dns/get_cloudflare_ip'
 #fixed ip
 # remove: 8.20.125.1, 141.101.120.121, 141.101.123.173
 if RECORD_TYPE == "A":
-    API = API_2
+    API = API_3
 
     self_cm_cfips = ""
     self_cu_cfips = ""
@@ -56,7 +56,7 @@ if RECORD_TYPE == "A":
     self_ct_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
     self_def_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
 else:
-    API = API_2
+    API = API_3
 
     self_cm_cfips = ""
     self_cu_cfips = ""
