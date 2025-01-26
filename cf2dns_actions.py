@@ -115,9 +115,9 @@ def changeDNS(line, s_info, c_info, domain, sub_domain, cloud):
                         continue
                 ret = cloud.change_record(domain, info["recordId"], sub_domain, cf_ip, RECORD_TYPE, line, TTL)
                 if(DNS_SERVER != 1 or ret["code"] == 0):
-                    print("你的DNS更新成功: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + "----DOMAIN: " 你的域名 "----SUBDOMAIN: " 二级域名 "----RECORDLINE: "+line+"----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) )
+                    print("你的DNS更新成功: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + "----DOMAIN: " + 你的域名 + "----SUBDOMAIN: " + 二级域名 + "----RECORDLINE: "+line+"----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) )
                 else:
-                    print("DNS更新出现错误: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + "----DOMAIN: " 你的域名 "----SUBDOMAIN: " 二级域名 "----RECORDLINE: "+line+"----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) + "----MESSAGE: " + ret["message"] )
+                    print("DNS更新出现错误: ----Time: " + str(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())) + "----DOMAIN: " + 你的域名 + "----SUBDOMAIN: " + 二级域名 + "----RECORDLINE: "+line+"----RECORDID: " + str(info["recordId"]) + "----VALUE: " + str(cf_ip) + "----MESSAGE: " + ret["message"] )
         elif create_num > 0:
             for i in range(create_num):
                 if len(c_info) == 0:
