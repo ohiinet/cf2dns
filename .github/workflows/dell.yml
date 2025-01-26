@@ -1,7 +1,7 @@
 name: Delete old workflow runs
 on:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
     inputs:
       root_sol:
@@ -18,14 +18,14 @@ jobs:
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0
+          retain_days: 1
+          keep_minimum_runs: 1
           delete_workflow_pattern: 'CF2DNS Bot'
       - name: Delete Self
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
-          retain_days: 0
-          keep_minimum_runs: 0
+          retain_days: 1
+          keep_minimum_runs: 1
           delete_workflow_pattern: 'Delete old workflow runs'
