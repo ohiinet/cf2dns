@@ -6,7 +6,7 @@ on:
     branches: 
       - master
   schedule:
-    - cron: '*/6 * * * *'
+    - cron: '*/17 * * * *'
 
 env:
   UPDATE_IPV4: true
