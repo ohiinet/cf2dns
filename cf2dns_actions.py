@@ -47,7 +47,7 @@ if RECORD_TYPE == "A":
 
     self_cm_cfips = ""
     self_cu_cfips = ""
-    self_ct_cfips = "104.19.37.227, 8.20.125.2, 104.19.138.18"
+    self_ct_cfips = ""
     self_def_cfips = ""
     self_cm_cfips_list = [{"ip": ip} for ip in self_cm_cfips.split(',')]
     self_cu_cfips_list = [{"ip": ip} for ip in self_cu_cfips.split(',')]
