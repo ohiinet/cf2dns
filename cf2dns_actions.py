@@ -37,13 +37,14 @@ else:
 
 #api
 API_1 = 'https://api.hostmonit.com/get_optimization_ip' # hostmonit
-API_2 = 'https://api.345673.xyz/get_data'
+#API_2 = 'https://api.345673.xyz/get_data'
+API_2 = 'https://api.vvhan.com/tool/cf_ip'
 API_3 = 'https://www.wetest.vip/api/cf2dns/get_cloudflare_ip'
 
 #fixed ip
 # remove: 8.20.125.1, 141.101.120.121, 141.101.123.173
 if RECORD_TYPE == "A":
-    API = API_3
+    API = API_2
 
     self_cm_cfips = ""
     self_cu_cfips = ""
@@ -54,7 +55,7 @@ if RECORD_TYPE == "A":
     self_ct_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
     self_def_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
 else:
-    API = API_3
+    API = API_2
 
     self_cm_cfips = ""
     self_cu_cfips = ""
