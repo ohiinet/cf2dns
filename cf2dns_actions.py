@@ -20,7 +20,7 @@ SECRETID = os.environ["SECRETID"]    #'AKIDV**********Hfo8CzfjgN'
 SECRETKEY = os.environ["SECRETKEY"]   #'ZrVs*************gqjOp1zVl'
 
 #DNSPOD免费版只支持两条, 华为支持集合
-AFFECT_NUM = 1
+AFFECT_NUM = 3
 #DNS服务商 DNSPod改为1 阿里云解析改成2  华为云解析改成3 华为云解析集合3.1
 DNS_SERVER = 3.1
 #如果试用华为云解析 需要从API凭证-项目列表中获取
@@ -44,7 +44,7 @@ API_3 = 'https://www.wetest.vip/api/cf2dns/get_cloudflare_ip'
 #fixed ip
 # remove: 8.20.125.1, 141.101.120.121, 141.101.123.173
 if RECORD_TYPE == "A":
-    API = API_2
+    API = API_3
 
     self_cm_cfips = ""
     self_cu_cfips = ""
@@ -55,7 +55,7 @@ if RECORD_TYPE == "A":
     self_ct_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
     self_def_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
 else:
-    API = API_2
+    API = API_3
 
     self_cm_cfips = ""
     self_cu_cfips = ""
