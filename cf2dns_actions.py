@@ -60,7 +60,7 @@ else:
     self_cm_cfips = ""
     self_cu_cfips = ""
     self_ct_cfips = ""
-    self_def_cfips = "2606:4700:91b8::, 2a06:98c1:56::"
+    self_def_cfips = ""
     self_cm_cfips_list = [{"ip": ip} for ip in self_cm_cfips.split(',')]
     self_cu_cfips_list = [{"ip": ip} for ip in self_cu_cfips.split(',')]
     self_ct_cfips_list = [{"ip": ip} for ip in self_ct_cfips.split(',')]
